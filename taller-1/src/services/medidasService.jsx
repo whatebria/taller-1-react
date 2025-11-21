@@ -36,7 +36,7 @@ const getMediciones = ()=>{
 const deleteMedicion = (id)=>{
     const lista = getMediciones()
     const filtradas = lista.filter(m =>m.id !== id)
-    localStorage.removeItem(localKey, JSON.stringify(filtradas))
+    localStorage.setItem(localKey, JSON.stringify(filtradas))
 }
 
 

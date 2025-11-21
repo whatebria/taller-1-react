@@ -38,14 +38,13 @@ function MedicionesTable({ mediciones, onDescartar }) {
 
     return (
         <DataTable value={mediciones}
-            sortField="fechaHora"
-            sortOrder={-1} // más recientes primero
+            removableSort
             emptyMessage="No hay mediciones registradas"
             tableStyle={{ minWidth: '50rem' }}>
 
-            <Column header="Fecha" body={fechaTemplate} sortable />
+            <Column field="fechaHora" header="Fecha" sortable body={fechaTemplate} />
             <Column header="Hora" body={horaTemplate} />
-            <Column field="medidor" header="Medidor" sortable />
+            <Column field="medidor" header="Medidor" />
             <Column header="Valor" body={valorTemplate} />
             <Column header="Acciones" body={accionesTemplate} />
         </DataTable>
