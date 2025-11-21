@@ -58,7 +58,9 @@ function RegistroForm({ onSubmit }) {
                 </div>
                 <div className="mb-4">
                     <FloatLabel>
-                        <InputNumber id="number-input" value={valor} onValueChange={(e) => setValor(e.value)} />
+                        <InputNumber id="number-input" value={valor} onValueChange={(e) => setValor(e.value)} min={1}
+                            max={500}
+                            mode="decimal" />
                         <label htmlFor="number-input">Valor</label>
                     </FloatLabel>
                 </div>

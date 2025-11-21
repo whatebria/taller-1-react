@@ -13,7 +13,7 @@ function FiltroTipoMedida({ tipo, onChangeTipo, onFiltrar }) {
 
     ]
     return (
-        <div>
+        <div className="flex align-items-center gap-3">
             <Dropdown
                 value={tipo}
                 options={opcionesTipos}
